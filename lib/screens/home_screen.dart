@@ -6,7 +6,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-        appBar: AppBar(title: const Text('Your System')),
+        appBar: AppBar(title: const Text('Semester Project')),
         body: Center(
           child: Padding(
             padding: const EdgeInsets.all(24),
@@ -17,7 +17,13 @@ class HomeScreen extends StatelessWidget {
                   'Welcome to Your System',
                   style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
                 ),
-                const SizedBox(height: 24),
+                const SizedBox(height: 20),
+                AppButton(
+                  label: 'Open Login',
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/login');
+                  },
+                ),
                 const SizedBox(height: 12),
                 AppButton(
                   label: 'Open Report Form',
@@ -25,6 +31,7 @@ class HomeScreen extends StatelessWidget {
                     Navigator.pushNamed(context, '/report');
                   },
                 ),
+                
               ],
             ),
           ),
