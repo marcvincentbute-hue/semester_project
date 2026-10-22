@@ -18,9 +18,12 @@ class HomeScreen extends StatelessWidget {
                   style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(height: 24),
+                const SizedBox(height: 12),
                 AppButton(
-                  label: 'Open Login',
-                  onPressed: () => Navigator.pushNamed(context, '/login'),
+                  label: 'Open Report Form',
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/report');
+                  },
                 ),
               ],
             ),

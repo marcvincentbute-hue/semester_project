@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'screens/home_screen.dart';
 import 'screens/login_screen.dart';
+import 'screens/report_form_screen.dart';
 
 class SemesterProjectApp extends StatelessWidget {
   const SemesterProjectApp({super.key});
@@ -13,10 +14,12 @@ class SemesterProjectApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
           useMaterial3: true,
         ),
+        
         initialRoute: '/',
         routes: {
           '/': (_) => const HomeScreen(),
           '/login': (_) => const LoginScreen(),
-        },
+          '/report': (_) => const ReportFormScreen(),
+        },      
       );
 }
